@@ -1,0 +1,463 @@
+.prize-pool-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a0a;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remove the grid background */
+/* .prize-pool-section::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  transform: rotate(45deg);
+  animation: gridMove 15s linear infinite;
+} */
+
+.prize-pool-container {
+  width: 100%;
+  max-width: 1200px;
+  perspective: 1000px;
+  position: relative;
+  z-index: 1;
+}
+
+.prize-pool-card {
+  position: relative;
+  padding: 4rem 5rem;
+  background: rgba(0, 255, 0, 0.02);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Remove gridMove animation since we removed the grid */
+/* @keyframes gridMove {
+  0% {
+    transform: rotate(45deg) translateY(0);
+  }
+  100% {
+    transform: rotate(45deg) translateY(-100px);
+  }
+} */
+
+.prize-pool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 40px rgba(0, 255, 0, 0.15);
+}
+
+.glow-effect {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #00ff00 0deg,
+    #003300 120deg,
+    #00ff00 240deg,
+    #003300 360deg
+  );
+  top: -25%;
+  left: -25%;
+  animation: rotate 8s linear infinite;
+  opacity: 0.08;
+  filter: blur(20px);
+}
+
+.title {
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.prize-amount {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 3rem;
+  background: rgba(0, 255, 0, 0.05);
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 255, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add shine effect on hover */
+.prize-amount::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(0, 255, 0, 0.1) 50%,
+    transparent 100%
+  );
+  transform: rotate(45deg);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.prize-amount:hover::after {
+  opacity: 1;
+  animation: shine 1.5s ease-out;
+}
+
+.currency {
+  font-size: 4rem;
+  color: #00ff00;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.amount {
+  font-size: 6rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0 0.5rem;
+  text-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.lakhs {
+  font-size: 2.5rem;
+  color: #00ff00;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.prize-details {
+  margin-top: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.position {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.value {
+  color: #00f0ff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Add new animations */
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translateX(-100%);
+  }
+  100% {
+    transform: rotate(45deg) translateX(100%);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Update mobile responsiveness */
+@media (max-width: 768px) {
+  .prize-pool-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .prize-pool-card {
+    padding: 2rem 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .currency {
+    font-size: 3rem;
+  }
+  
+  .amount {
+    font-size: 4.5rem;
+  }
+  
+  .lakhs {
+    font-size: 2rem;
+  }
+}
+
+/* Add these new styles after your existing styles */
+
+.prize-description {
+  margin-top: 3rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.main-desc {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prize-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feature-item {
+  background: rgba(0, 255, 0, 0.03);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 0, 0.1);
+  transition: all 0.3s ease;
+  min-width: 200px;
+  /* Added flex basis to maintain consistent sizing */
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: calc(33.333% - 2rem);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 255, 0, 0.05);
+  border-color: rgba(0, 255, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.additional-perks {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(0, 255, 0, 0.02);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 255, 0, 0.1);
+}
+
+.additional-perks h3 {
+  color: #00ff00;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.additional-perks ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.additional-perks li {
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.additional-perks li::before {
+  content: "→";
+  color: #00ff00;
+  position: absolute;
+  left: 0;
+}
+
+.prize-note {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.prize-note p {
+  margin: 0.5rem 0;
+}
+@media (max-width: 992px) {
+  .feature-item {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .prize-pool-section {
+    padding: 2rem 1rem;
+  }
+  
+  .prize-pool-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .prize-pool-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .currency {
+    font-size: 2.5rem;
+  }
+  
+  .amount {
+    font-size: 3.5rem;
+  }
+  
+  .lakhs {
+    font-size: 1.5rem;
+  }
+  
+  .prize-amount {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .main-desc {
+    font-size: 1.1rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .prize-features {
+    gap: 1rem;
+  }
+
+  .feature-item {
+    padding: 1rem 1.5rem;
+    min-width: unset;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-text {
+    font-size: 1rem;
+  }
+
+  .additional-perks {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .additional-perks h3 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .additional-perks ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .additional-perks li {
+    padding: 0.75rem 0 0.75rem 1.5rem;
+  }
+  
+  .detail-item {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+  
+  .position, .value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prize-pool-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .currency {
+    font-size: 2rem;
+  }
+  
+  .amount {
+    font-size: 2.5rem;
+  }
+  
+  .lakhs {
+    font-size: 1.25rem;
+  }
+  
+  .prize-amount {
+    padding: 1rem;
+  }
+  
+  .main-desc {
+    font-size: 1rem;
+  }
+  
+  .feature-item {
+    padding: 0.75rem 1rem;
+  }
+}

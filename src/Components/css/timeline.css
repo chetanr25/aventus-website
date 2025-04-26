@@ -1,0 +1,26 @@
+.timeline img {
+    max-height: 100%;
+    max-width: 300%;
+    height: auto;
+    width: 110vw;
+    align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+    .timeline .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .image-slider img {
+      max-height: 30vh; /* Reduce the maximum height of the images on smaller screens */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .image-slider img {
+      max-height: 30vh; /* Further reduce the maximum height for even smaller screens */
+    }
+  }

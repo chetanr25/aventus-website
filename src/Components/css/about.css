@@ -1,0 +1,257 @@
+
+
+
+.acontent {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    /* background-color: white; */
+    justify-content: space-between;
+}
+
+.s-two {
+
+    /* background: linear-gradient(180deg, #233329 20%, #021104); */
+    background-color: #101010;
+    border-radius: 20px;
+}
+
+.timecount {
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    margin: 0rem auto;
+    border-radius: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.time{
+    display: flex;
+}
+
+.cele {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 150px;
+    transition: all 0.3s;
+}
+
+.cele:hover {
+    transform: scale(1.1);
+}
+
+.cele:hover .celep {
+    color: white !important;
+
+}
+
+.celep {
+    transition: all 0.3s;
+}
+
+.cele p {
+    letter-spacing: 3px;
+    font-size: xx-large;
+    color: rgb(255, 255, 255, 0.88);
+}
+
+
+
+.cele span {
+    font-size: larger;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.t {
+    width: 20%;
+    font-size: x-large;
+    margin-right: 2rem;
+    color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.track {
+    scale: 0.9;
+}
+
+.sponsors {
+    scale: 0.8;
+}
+
+
+@keyframes drop {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 110%
+    }
+}
+
+.aleft {
+    width: 60%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.aleft p {
+    margin: 1.5rem 0;
+    font-family: "poppins";
+    font-family: 500;
+    font-size: small;
+    text-align: justify;
+}
+
+.faq {
+    padding-top: 5rem;
+}
+
+.clgabout h1 {
+    font-size: x-large;
+}
+
+.aright img {
+    width: 100%;
+    /* background-color: rgba(233, 233, 233, 0.062); */
+    border-radius: 30rem;
+    right: 0;
+}
+
+.aright {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width:956px){
+    .timecount{
+        flex-direction: column;
+        padding: 2rem 0;
+        align-items: center;
+        gap: 30px;
+    }
+    .cele{
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    .acontent {
+        padding-top: 5.5rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        /* background-color: white; */
+        justify-content: space-between;
+    }
+
+    .aleft {
+        width: 96%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 0.5rem;
+    }
+
+    .aright {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .timecount .t{
+        font-size: 40px;
+    }
+
+    .timecount {
+        
+        font-size: 20px;
+        transform: scale(0.7);
+        
+
+    }
+
+    .track .flex .px-6 div:nth-child(1) {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .track .flex {
+        width: 100%;
+        width: 45% !important;
+    }
+
+    .track .flex .px-6 {
+        padding: 0;
+        width: 100%;
+    }
+
+    .track {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .t {
+        width: 100%;
+        font-size: x-large;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: var(--primary-color);
+        margin: 0;
+    }
+    .time{
+        gap: 20px;
+    }
+
+    .cele {
+        margin: 0;
+        font-size: 15px;
+        width: 110px;
+        transition: all 0.3s;
+    }
+    .cele span{
+        font-size: 15px;
+    }
+    .aleft p {
+        margin: 1.5rem 0;
+        font-family:"poppins";
+        font-family: 500;
+        font-size:  .75em;
+    }
+    .clgabout h1 {
+        font-size: large;
+        text-align: center;
+    }
+    .timecount {
+        align-items: left;
+        flex-flow: left;
+    }
+}

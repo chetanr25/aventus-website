@@ -1,0 +1,168 @@
+/* .sponsors img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+    
+} */
+ /* Background Effect */
+#sponsors-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:  0;
+  min-height: 0;
+  background-color: black;
+}
+
+/* Main Wrapper */
+.sponsors-wrapper {
+  width: 90%;
+  max-width: 600px;
+  background: linear-gradient(to bottom, #000000,rgba(8, 218, 34, 0.3));
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid rgb(0, 190, 102);
+  box-shadow: 0px 4px 10px rgba(69, 158, 44, 0.3);
+  text-align: center;
+}
+
+/* Title */
+.sponsors-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Sponsor Inner */
+.sponsors-inner {
+  background: linear-gradient(to bottom,rgba(8, 218, 34, 0.3), #000000);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 10px rgb(0, 190, 102);
+}
+
+/* Sponsor Card */
+.sponsor-card {
+  background: linear-gradient(to bottom , #000000, rgba(8, 218, 34, 0.3));
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 255, 81, 0.2);
+}
+
+/* Sponsor Logo */
+.sponsor-logo {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.sponsor-img{
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Sponsor Name & Description */
+.sponsor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.sponsor-description {
+  color: #d1fae5;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  padding: 0 2px;
+  text-align: center;
+  
+}
+
+/* Sponsor Links */
+.sponsor-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.sponsor-btn {
+  background-color: #209f1d;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 2px 5px rgba(255, 119, 0, 0.2);
+}
+
+.sponsor-btn:hover {
+  background-color: #90bb8c;
+}
+
+
+.sponsors {
+    background-color: #101010; 
+    display: relative;
+    /* or any other background color you prefer */
+  }
+  
+  .sponsors img {
+    height: 150px; /* Adjust the height as needed */
+    width: 300px; /* Adjust the width as needed */
+    border-radius: 20px; /* This gives the images rounded edges */
+    object-fit: fill; /* This gives the images a square shape */
+  }
+  
+  /* Optional: Add some spacing between the images */
+  .sponsors .flex > div {
+    margin: 0;
+  }
+  
+  /* Optional: Add some hover effect */
+  .sponsors img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+@media screen and (max-width: 640px) {
+    .sponsors .container {
+      margin: 0px;
+      justify-content: center;
+      display: flex;
+      object-fit: cover;
+    }
+    .sponsors-wrapper {
+      
+      width: 90%;
+      max-width: 100%px;
+      background: linear-gradient(to bottom, #000000,rgba(8, 218, 34, 0.3));
+      padding: 5px;
+      border-radius: 20px;
+      border: 1px solid rgb(0, 190, 102);
+      box-shadow: 0px 4px 10px rgba(69, 158, 44, 0.3);
+      text-align: center;
+    }
+    .sponsors-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .sponsors img{
+      width: 340px;
+    }
+    .mark{
+      justify-content: center;
+    }
+}

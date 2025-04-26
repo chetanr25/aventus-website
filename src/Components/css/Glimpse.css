@@ -1,0 +1,80 @@
+/* Main Container */
+.glimpse-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Slider Wrapper */
+.image-slider-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Slider Container */
+.slick-slider {
+  position: relative;
+}
+
+/* Slide Content */
+.slide {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.slide-content {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Image Styling */
+.slide-content img {
+  width: auto;
+  max-width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(50, 205, 50, 0.5);
+}
+
+
+.slide-content:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(50, 205, 50, 0.8);
+}
+
+
+/* Title Styling */
+.glimpse-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 1024px) {
+  .slide-content img {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slide-content img {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .slide-content img {
+    height: 150px;
+  }
+}

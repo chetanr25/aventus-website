@@ -1,0 +1,196 @@
+/* Track.css */
+
+#h2{
+  color: #fff;
+font-size: 1rem;
+}
+
+/* Tab Links */
+.tab-links {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.tab-links.active-link {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+/* Tab Contents */
+.tab-contents {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+#about {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-contents-active-tab{
+  
+}
+
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: bold;
+}
+
+#about{
+  padding: 80px 0;
+  color: cadetblue;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1{
+  flex-basis: 35%;
+}
+.about-col-1 img{
+  width: 100%;
+  border-radius: 15px;
+}
+.about-col-2{
+  flex-basis: 60%;
+}
+.subtitle{
+  font-size: 40px;
+  font-weight: 200;
+  color: navy;
+}
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: greenyellow;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+  width: 100%;
+}
+
+.tab-contents {
+  color: lightseagreen;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span{
+  font-size: 16px;
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents .active-tab{
+  display: block;
+}
+
+.tab-contents .active-sub-tab{
+display: block;
+}
+
+/* .tab-contents {
+  background: #000;
+  font-family: 'Nunito';
+
+} */
+
+.sub-tab-contents{
+display: none;
+background-color: black;
+font-family: 'Courier New', Courier, monospace;
+opacity: 0.8;
+margin-top: 20px;
+font-weight: 400;
+font-style: normal;
+margin-top: 20px;
+}
+
+.p span{
+
+  color: cyan;
+}
+
+/* Responsiveness of the code */
+
+/* Example media query for smaller screens */
+@media (max-width: 768px) {
+/* Styles for screens up to 768px */
+.container {
+  padding: 10px;
+}
+.tab-titles {
+  flex-direction: column;
+}
+.tab-links {
+  margin-bottom: 10px;
+}
+}
+
+.tab-titles {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.tab-links {
+flex: 0 0 auto;
+margin: 5px;
+font-size: 1rem;
+padding: 0.5rem 1rem;
+}
+

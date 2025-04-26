@@ -1,0 +1,42 @@
+.prizes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.prize-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.prize-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prize-title {
+    font-size: 1.25rem;
+
+}
+.prize-amount {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgba(0, 255, 0, 0.542);
+
+}
+
+.sponsor-prize {
+    margin-top: 1.5rem;
+}
+
+.sponsor-prize-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.sponsor-prize-title{
+    text-align: justify;
+    color: rgb(157, 157, 157);
+}
+.sponsor-prize-details{
+    text-align: justify;
+}

@@ -1,0 +1,239 @@
+
+
+.contact-content {
+  width: 100%; /* Responsive width */
+  max-width: 480px; /* Prevents it from being too wide */
+  height : 480px;
+  margin-left: auto;
+  border: 3px solid #09d55e; /* Green border */
+  padding: 2rem; /* Reduced padding for better spacing */
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(46, 204, 113, 0.3), 
+              0 15px 35px rgba(46, 204, 113, 0.2), 
+              0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centers text content */
+}
+
+.contact-content:hover {
+  box-shadow: 0 15px 35px rgba(46, 204, 113, 0.4), 
+              0 20px 45px rgba(46, 204, 113, 0.3),
+              0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-content h2 {
+  color: #f0f0f0;
+  font-size: 2rem;
+  margin-bottom: 2rem; /* Adjusted margin */
+}
+
+.contact-info {
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers items */
+  flex-wrap: wrap; /* Allows wrapping for small screens */
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+  gap: 0.5rem; /* Adds spacing */
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #2ecc71;
+}
+
+.contact-link {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #0ccb5b;
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.social-link {
+  transition: all 0.3s ease;
+  padding: 0.8rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid transparent;
+}
+
+.social-link:nth-child(1) {
+  background: transparent;
+  color: white;
+  border-color: #1bc707;
+}
+.social-link:nth-child(1):hover {
+
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  color: white;
+  border-color: #21c60f;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+/* LinkedIn - Solid blue */
+.social-link:nth-child(2) {
+  background: transparent;
+  color: white;
+  border-color: #1bc707;
+}
+.social-link:nth-child(2):hover {
+  /* Gradient background for LinkedIn */
+  background: linear-gradient(45deg, #0077B5, #004182);
+  color: white;
+  border-color: #21c60f;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+/* Discord - Blurple */
+.social-link:nth-child(3) {
+  background: transparent;
+  color: white;
+  border-color:#1bc707;
+}
+.social-link:nth-child(3):hover {
+  /* Gradient background for LinkedIn */
+  background: linear-gradient(45deg, #5865F2, #404EED);
+  color: white;
+  border-color: #21c60f;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+/* Telegram - Blue */
+.social-link:nth-child(4) {
+  background:transparent;
+  color: white;
+  border-color:#1bc707;
+}
+.social-link:nth-child(4):hover {
+background: linear-gradient(45deg, #0088cc, #229ED9);
+  color: white;
+  border-color: #21c60f;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-content {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all items */
+  }
+
+  .contact-content h2 {
+    font-size: 1.75rem;
+    text-align: center; /* Center the heading */
+    width: 100%; /* Ensure full width */
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 1rem; /* Add spacing between items */
+  }
+
+  .social-links {
+    gap: 0.75rem;
+    justify-content: center; /* Center social links */
+    width: 100%; /* Ensure full width */
+  }
+
+  .social-link {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 400px) {
+
+  .contact-content {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contact-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+    text-align: center;
+    flex-direction: column; /* Stack items in small screens */
+  }
+
+  .social-links {
+    gap: 0.8rem; /* Reduce spacing */
+  }
+
+  .social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact-content {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-item {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  .social-links {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+}
+
+.contact-content h2{
+  color: var(--primary-color);
+}
+@media(min-width : 768px) and (max-width :900px) {
+  .contact-info{
+    margin-bottom: 0px;
+  }
+}

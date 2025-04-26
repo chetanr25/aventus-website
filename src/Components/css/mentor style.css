@@ -1,0 +1,408 @@
+/* Mentors Section Styles */
+.mentors-section {
+  padding: 5rem 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.mentors-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(8, 218, 34, 0.5), transparent);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.section-header .highlight {
+  color: #08da22;
+  position: relative;
+}
+
+.section-header .highlight:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #08da22;
+}
+
+.section-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+.mentors-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Mentor Card Styling */
+.mentor-card {
+  position: relative;
+  margin: 1rem;
+  height: 470px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mentor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(8, 218, 34, 0.2);
+}
+
+.mentor-header {
+  height: 150px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.mentor-image {
+  position: absolute;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #08da22;
+  box-shadow: 0 0 15px rgba(8, 218, 34, 0.6);
+  transition: transform 0.3s;
+  background-color: #000;
+}
+
+.mentor-card:hover .mentor-image {
+  transform: scale(1.05);
+}
+
+.mentor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mentor-info {
+  padding: 4rem 1.5rem 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.mentor-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.mentor-tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mentor-role, .mentor-team {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mentor-role {
+  color: #08da22;
+  border: 1px solid #08da22;
+}
+
+.mentor-team {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.mentor-track {
+  margin: 1.25rem 0;
+  padding: 0.75rem;
+  background: rgba(8, 218, 34, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 0.25rem;
+}
+
+.track-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #08da22;
+}
+
+.mentor-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.linkedin-btn, .portfolio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.linkedin-btn {
+  background: #0077b5;
+  color: white;
+}
+
+.linkedin-btn:hover {
+  background: #00669c;
+  transform: translateY(-2px);
+}
+
+.linkedin-btn svg {
+  margin-right: 0.5rem;
+}
+
+.portfolio-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.portfolio-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Background classes */
+.pb_bimg {
+  position: relative;
+  overflow: hidden;
+}
+
+.pb_bimg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../public/pb_bimg.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.os_bimg {
+  position: relative;
+  overflow: hidden;
+}
+
+.os_bimg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../public/os_bimg.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+/* Slider Customization */
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: rgba(8, 218, 34, 0.5);
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #08da22;
+  opacity: 1;
+}
+
+.slick-prev, 
+.slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: -45px;
+}
+
+.slick-next {
+  right: -45px;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+  font-size: 40px;
+  color: #08da22;
+  opacity: 0.8;
+  text-shadow: 0 0 10px rgba(8, 218, 34, 0.4);
+}
+
+.slick-prev:hover:before, 
+.slick-next:hover:before {
+  color: #08da22;
+  opacity: 1;
+}
+
+/* Hover effects and animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(8, 218, 34, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(8, 218, 34, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(8, 218, 34, 0);
+  }
+}
+
+.mentor-image:hover {
+  animation: pulse 1.5s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .mentors-slider {
+    padding: 0 0.5rem;
+  }
+  
+  .mentor-card {
+    height: 480px;
+  }
+  
+  .slick-prev {
+    left: -25px;
+  }
+  
+  .slick-next {
+    right: -25px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mentors-section {
+    padding: 3rem 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .mentor-card {
+    margin: 0.5rem;
+  }
+  
+  .slick-prev, 
+  .slick-next {
+    display: none !important;
+  }
+  
+  .mentor-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .mentor-info {
+    padding: 3.5rem 1rem 1rem;
+  }
+}
+
+/* Loading animation for images */
+.mentor-image.loading {
+  position: relative;
+}
+
+.mentor-image.loading:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(8, 218, 34, 0.2), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Additional hover effects */
+.mentor-card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 50%, rgba(8, 218, 34, 0.1) 50%);
+  background-size: 250% 250%;
+  background-position: 0% 0%;
+  transition: background-position 0.6s ease;
+  pointer-events: none;
+}
+
+.mentor-card:hover:after {
+  background-position: 100% 100%;
+}

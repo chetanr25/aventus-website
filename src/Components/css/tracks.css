@@ -1,0 +1,332 @@
+/* Track-specific variables */
+#Tracks {
+  --primary-color: #00ff2a;
+  --secondary-color: #052e0b;
+  --accent-color: #069114;
+  --dark-bg: #0a0a0a;
+  --card-bg: rgba(10, 10, 10, 0.95);
+  --card-border: rgba(5, 130, 19, 0.15);
+  --glass-effect: blur(0px);
+  --shadow-glow: 0px 0px 20px rgba(5, 130, 19, 0.15);
+  min-height: 100vh;
+  background-color: var(--dark-bg);
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;
+}
+
+.track-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(5, 130, 19, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(5, 130, 19, 0.08) 0%, transparent 50%);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%
+  }
+}
+
+.tracks {
+  padding: 2rem 0;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title .highlight {
+  color: var(--primary-color);
+  text-shadow: 0 0 15px rgba(0, 255, 42, 0.4);
+}
+
+.section-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  margin: 0 auto 1.5rem;
+}
+
+.section-description {
+  color: #bbbdc0;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.track-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.track {
+  margin: 0 auto;
+}
+
+.track-item {
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  overflow: visible;
+  position: relative;
+  padding: 2rem;
+  min-height: 450px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.track-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(5, 130, 19, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 10% 10%, rgba(5, 130, 19, 0.04) 0%, transparent 30%),
+    radial-gradient(circle at 90% 90%, rgba(5, 130, 19, 0.04) 0%, transparent 30%);
+  opacity: 0.3;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+.circuit-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, transparent 48%, rgba(5, 130, 19, 0.2) 49%, rgba(5, 130, 19, 0.2) 51%, transparent 52%),
+    linear-gradient(to bottom, transparent 48%, rgba(5, 130, 19, 0.2) 49%, rgba(5, 130, 19, 0.2) 51%, transparent 52%),
+    linear-gradient(45deg, transparent 48%, rgba(5, 130, 19, 0.2) 49%, rgba(5, 130, 19, 0.2) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(5, 130, 19, 0.2) 49%, rgba(5, 130, 19, 0.2) 51%, transparent 52%);
+  background-size: 30px 30px, 30px 30px, 40px 40px, 40px 40px;
+  opacity: 0.08;
+  mix-blend-mode: screen;
+  animation: circuit-animation 30s linear infinite;
+}
+
+@keyframes circuit-animation {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 30px 0, 0 30px, 40px 0, 0 40px;
+  }
+}
+
+.track-header-image {
+  border-radius: 0.3rem 0.3rem 0 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.track-item:hover .track-header-image {
+  filter: brightness(1.2);
+}
+
+.track-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(5, 130, 19, 0.08);
+  border-color: rgba(5, 130, 19, 0.12);
+}
+
+.track-item:hover .circuit-pattern {
+  opacity: 0.1;
+}
+
+.track-item:hover .track-background {
+  opacity: 0.2;
+}
+
+.track-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.track-image {
+  width: 100%;
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  width: calc(100% + 3rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.track-image img {
+  filter: brightness(1.2) contrast(1.2);
+  transition: all 0.3s ease;
+}
+
+.track-item:hover .track-image img {
+  filter: brightness(1.4) contrast(1.3);
+  transform: scale(1.05);
+}
+
+.track-icon {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.track-item-header {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.track-category {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+.track h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 255, 42, 0.4), 0 0 20px rgba(0, 255, 42, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.track-description {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: auto;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.track-time {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: auto;
+}
+
+.track-item:hover h1 {
+  color: #00ff2a;
+  text-shadow: 0 0 15px rgba(0, 255, 42, 0.5), 0 0 25px rgba(0, 255, 42, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .track-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .track-item {
+    min-height: 400px;
+  }
+  
+  .track h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tracks {
+    padding: 1rem 0;
+  }
+  
+  .track-icon {
+    height: 150px;
+  }
+  
+  .track-item {
+    min-height: 380px;
+    padding: 1.5rem;
+  }
+
+  .track h1 {
+    font-size: 1.75rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .track h1 {
+    font-size: 1.5rem;
+  }
+  
+  .track-item {
+    min-height: 350px;
+    padding: 1.25rem;
+  }
+  
+  .track-header-image {
+    margin: -1rem -1rem 1rem -1rem;
+    width: calc(100% + 2rem);
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap');

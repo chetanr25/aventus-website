@@ -1,0 +1,193 @@
+.ps h1 {
+  color: #f0f0f0;
+  font-size: 2.5rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.timeline h6 {
+  color: #8bc34a;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.glimpse {
+  color: #10e110;
+  font-size: 2.5rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+ 
+}
+
+.mentors h1 {
+  color: #009688;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 150px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.judges h1 {
+  margin-top: 150px;
+  color: #e91e63;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.GrandJury h1 {
+  margin-top: 150px;
+  color: #ffeb3b;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.individual h1 {
+  margin-top: 150px;
+  color: #f0f0f0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.map {
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.map h1 {
+  margin-top: 0;
+  color: #f0f0f0;
+  font-size: 2.5rem;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.swarmBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.conta {
+  overflow-x: hidden;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.conta > div {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.answer {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+}
+
+.contact-venue-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 2rem;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-map-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  gap: 10rem;
+  width: 100%;
+}
+
+.contact-map-container .contact-section {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+.contact-map-container .map {
+  flex: 1;
+  min-width: 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .contact-venue-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  
+.conta {
+  background: transparent;
+}
+
+.conta > div {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+  .contact-map-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .contact-map-container .contact-section {
+    padding: 1rem;
+  }
+  .contact-map-container .map {
+    padding: 1rem;
+  }
+}
+
+@media (max-width:480px) {
+  .glimpse h1{
+    margin-top: 1rem;
+  }
+  
+}
+
+/* Add these styles to your existing App.css */
+/* * {
+  cursor: none !important;
+}
+
+a, button, input, select, textarea {
+  cursor: none !important;
+} */

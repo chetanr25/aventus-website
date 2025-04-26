@@ -1,0 +1,125 @@
+/* Venue Container - Responsive & Styled */
+.venue-container {
+    width: 100%;  /* Full width for responsiveness */
+    max-width: 480px; /* Matches Contact Us box */
+    height: 480px; /* Adjust height dynamically */
+    padding: 2rem;
+    border: 3px solid #2ecc71; /* Neon green border */
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 10px 25px rgba(46, 204, 113, 0.3), 
+        0 15px 35px rgba(46, 204, 113, 0.2), 
+        0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.venue-container:hover {
+    box-shadow: 
+        0 15px 35px rgba(46, 204, 113, 0.4), 
+        0 20px 45px rgba(46, 204, 113, 0.3),
+        0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Venue Title */
+.venue-container h1 {
+    font-family: 'OmegaFlight'; 
+    font-size: 2rem;
+    font-weight: 600; /* Slightly bolder */
+    color: var(--primary-color); /* Neon green */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Google Map Styling - Responsive */
+.venue-container iframe {
+    width: 100%;  /* Make the embedded map fully responsive */
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .venue-container {
+        max-width: 100%; /* Allow full width on smaller screens */
+        padding: 1.5rem;
+    }
+
+    .venue-container iframe {
+        height: 250px; /* Reduce height on smaller screens */
+    }
+
+    .venue-container h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .venue-container iframe {
+        height: 200px; /* Further reduce height for small devices */
+    }
+
+    .venue-container h1 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .venue-container {
+      max-width: 73%;
+      left: 6rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center all content */
+      text-align: center; /* Center text elements */
+    }
+  
+    .venue-container h1 {
+      font-size: 1.8rem;
+      width: 100%; /* Ensure full width */
+      margin-bottom: 1rem; /* Add spacing below heading */
+    }
+  
+    .venue-container iframe {
+      height: 250px;
+      width: 100%; /* Ensure map takes full width */
+      margin: 0 auto; /* Center horizontally */
+    }
+  
+    /* If you have address/text elements */
+    .venue-address {
+      font-size: 0.9rem;
+      width: 100%;
+      margin-top: 1rem; /* Add spacing above address */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .venue-container {
+      padding: 1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .venue-container iframe {
+      height: 180px;
+      width: 100%;
+    }
+    .venue-address {
+      font-size: 0.8rem;
+      width: 100%;
+    }
+  }

@@ -1,0 +1,302 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  width: 100%;
+  max-width: 2000px; 
+  margin: 0 auto;
+}
+
+
+.hod-container {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+.core-members-container{
+   display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.hod, .core-member {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(8, 218, 34, 0.2);
+  border: 1.2px solid rgba(8, 218, 34, 0.3);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #d1d5db;
+}
+
+.hod {
+  width: 300px;
+  height: 300px;
+}
+
+.core-member {
+  width: 200px;
+  height: 200px;
+}
+
+.hod-img, .hod-img1, .core-member-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* Makes images cover the entire container */
+  box-shadow: 0 0 30px rgba(45, 228, 66, 0.2);
+  border: 1px solid rgba(8, 218, 34, 0.3);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hod-name, .core-member-name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Original core members grid layout - keeping for backward compatibility */
+.core-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Updated group photos container with better mobile alignment */
+.group-photos-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.group-photo {
+  width: 600px;
+  height: 360px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(8, 218, 34, 0.2);
+  border: 1px solid rgba(8, 218, 34, 0.3);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #d1d5db;
+  margin: 0 10px 20px 10px;
+}
+
+.group-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.photo-caption {
+  color: white;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  padding: 0 5px;
+}
+
+.hod:hover, .core-member:hover, .group-photo:hover {
+  background-color: #08da22;
+  transform: translateY(-5px);
+}
+
+.section-title {
+  color: #08da22;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-family: 'OmegaFlight';
+  margin-top: 3rem;
+
+}
+
+.member-info {
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.member-info h4 {
+  color: white;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.member-info p {
+  color: #d1d5db;
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+/* Media queries with improved mobile alignment */
+@media (max-width: 1000px) {
+  .container {
+    padding: 7px 4px;
+    gap: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .hod {
+    width: 220px;
+    height: 220px;
+    align-items: center;
+    gap: 1px;
+  }
+  
+  .core-member {
+    width: 150px;
+    height: 150px;
+    align-items: center;
+  }
+  
+  .core-members {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .group-photo {
+    width: 320px;
+    height: 200px;
+    margin: 0 auto 20px auto;
+  }
+  
+  .group-photos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px 8px;
+    gap: 2px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .hod-container, .core-members-container {
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .hod {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 10px auto;
+  }
+  
+  .core-member {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px auto;
+  }
+  
+  .member-info {
+    margin-top: 0.5rem;
+    padding: 0 5px;
+  }
+  
+  .core-members {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 300px;
+  }
+  
+  .group-photo {
+    width: 90%;
+    height: 180px;
+    margin: 0 auto 20px auto;
+  }
+  
+  .group-photos-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .photo-caption {
+    font-size: 0.9rem;
+  }
+  
+  .hod-name h1, .core-member-name h1 {
+    font-size: 1.5rem;
+  }
+  
+  .member-info h4 {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .hod {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .core-member {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .group-photo {
+    width: 90%;
+    height: 160px;
+    gap: 3rem;
+  }
+  
+  .member-info h4 {
+    font-size: 0.9rem;
+  }
+  
+  .member-info p {
+    font-size: 0.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .hod-container{
+    gap: 5rem;
+  }
+}
+@media (min-width: 768px) and (max-width:900px){
+  .hod-container{
+    gap: 5rem;
+  }
+}
