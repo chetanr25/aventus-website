@@ -10,8 +10,8 @@ export default function PrizePodium() {
   const podium = [
     {
       title: "Grand Prize",
+      description: "₹70K by Aventus & ₹30K by Techminya Solutions",
       aventus_amount: "₹1,00,000",
-      
       position: "center",
       color: "#FFD700",
       delay: "delay-2",
@@ -61,16 +61,13 @@ export default function PrizePodium() {
       position: "right"
     },
     {
-      title: "Best Business Innovation ",
+      title: "Best Business Innovation",
       aventus_amount: "₹50,000",
       description:
-        "For the team that turned code into a company. Bold, market-ready, and backed by DERBI’s seed funding to kickstart your venture.",
-        icon: <img src="/Derbi.png" alt="Derbi" style={{ width: '88px', height: '85px', objectFit: 'contain' }} />,
-
+        "For the team that turned code into a company. Bold, market-ready, and backed by DERBI’s seed funding to kickstart your venture.",
+      icon: <img src="/Derbi.png" alt="Derbi" style={{ width: '88px', height: '85px', objectFit: 'contain' }} />,
       position: "right"
     }
-
-    
   ];
 
   useEffect(() => {
@@ -108,16 +105,25 @@ export default function PrizePodium() {
             </div>
             <h4 className="title">
               {prize.title.split("\n").map((line, idx) => (
-                <span key={idx}>{line}<br /></span>
+                <span key={idx}>
+                  {line}
+                  <br />
+                </span>
               ))}
             </h4>
+            {prize.title === "Grand Prize" && (
+              <p className="desc">{prize.description}</p>
+            )}
             <p className="aventus-amount">{prize.aventus_amount}</p>
+            {prize.title !== "Grand Prize" && prize.description && (
+              <p className="description">{prize.description}</p>
+            )}
           </div>
         ))}
       </div>
 
       <div className="specials" ref={specialsRef}>
-      <h2 className="section-title-1">Special Category Awards</h2>
+        <h2 className="section-title-1">Special Category Awards</h2>
         {specialPrizes.map((prize, index) => (
           <div
             key={prize.title}
@@ -130,7 +136,10 @@ export default function PrizePodium() {
             </div>
             <h4 className="title">
               {prize.title.split("\n").map((line, idx) => (
-                <span key={idx}>{line}<br /></span>
+                <span key={idx}>
+                  {line}
+                  <br />
+                </span>
               ))}
             </h4>
             <p className="aventus-amount">{prize.aventus_amount}</p>

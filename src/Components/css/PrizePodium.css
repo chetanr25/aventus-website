@@ -24,14 +24,25 @@
   font-family: 'OmegaFlight', sans-serif;
 }
 
-.description {
+
+.description ,.desc {
   font-family: 'OmegaFlight', 'Inter', 'Segoe UI', sans-serif;
   letter-spacing: 0.01em;
   font-weight: 100;
-  text-align: left;
   font-size: 0.75rem;
   margin-top: 0.5rem;
 }
+
+.description{
+  text-align: left;
+}
+
+
+.desc {
+  text-align: center;
+  color: rgb(158, 156, 156);
+}
+
 
 .specials {
   display: flex;
@@ -153,7 +164,7 @@
 
 .podium-row .special-card {
   width: 240px;
-  height: 240px;
+  height: 270px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -286,5 +297,11 @@
 
   .emoji {
     font-size: clamp(1.3rem, 5vw, 2.2rem);
+  }
+}
+
+@media (max-width:500px){
+  .podium-row .special-card.left, .podium-row .special-card.right{
+    width:250px;
   }
 }
