@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/landing.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,6 +11,9 @@ import "aos/dist/aos.css";
 import { swarmBackground } from "threejs-toys";
 
 function Landing() {
+
+  const [time, setTime] = useState({});
+
   useEffect(() => {
     // Initialize the background effect
     const landingMain = document.getElementById("landing-main");
@@ -57,6 +60,21 @@ function Landing() {
     //   window.removeEventListener("resize", handleResize);
     //   effect.remove();
     // };
+  }, []);
+
+  useEffect(() => {
+    let date = new Date("April 30, 2025 23:59:00").getTime();
+    setInterval(function () {
+      let now = new Date().getTime();
+      let dist = date - now;
+      let time = {
+        days: Math.floor(dist / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((dist % (1000 * 60)) / 1000),
+      };
+      setTime(time);
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -209,6 +227,30 @@ function Landing() {
                 </button>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Timer for registeration ending */}
+
+      <div className="timecount">
+        <div className="t">Registeration ends in</div>
+        <div className="time">
+          <div className="days cele glass">
+            <p className="celep">{time.days || 0}</p>
+            <span className="celep">Days</span>
+          </div>
+          <div className="hours cele glass">
+            <p className="celep">{time.hours || 0}</p>
+            <span className="celep">Hours</span>
+          </div>
+          <div className="minutes cele glass">
+            <p className="celep">{time.minutes || 0}</p>
+            <span className="celep">Minutes</span>
+          </div>
+          <div className="seconds cele glass">
+            <p className="celep">{time.seconds || 0}</p>
+            <span className="celep">Seconds</span>
           </div>
         </div>
       </div>

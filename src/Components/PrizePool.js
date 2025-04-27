@@ -44,6 +44,10 @@ const PrizePool = () => {
                 <span className="feature-icon">🚀</span>
                 <span className="feature-text">Mentorship Session</span>
               </div>
+              <div className="feature-item">
+              <span className="feature-icon">🌱</span>
+              <span className="feature-text">Incubation Support</span>
+              </div>
             </div>
 
             <div className="additional-perks">
@@ -56,10 +60,7 @@ const PrizePool = () => {
               </ul>
             </div>
 
-            <div className="prize-note">
-              <p>* Detailed prize breakdowns will be announced soon</p>
-              <p>* Special prizes for innovation and creativity</p>
-            </div>
+           
           </div>
         </div>
       </motion.div>

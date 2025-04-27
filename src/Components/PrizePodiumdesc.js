@@ -11,6 +11,7 @@ export default function PrizePodium() {
     {
       title: "Grand Prize",
       aventus_amount: "₹1,00,000",
+      
       position: "center",
       color: "#FFD700",
       delay: "delay-2",
@@ -58,7 +59,18 @@ export default function PrizePodium() {
         "For the wild idea that made us say, 'Wait... can they actually do that?' You pushed the limits, and then casually rewrote them.",
       icon: <FontAwesomeIcon icon={faLightbulb} size="2x" color="#00ff2a" />,
       position: "right"
+    },
+    {
+      title: "Best Business Innovation ",
+      aventus_amount: "₹50,000",
+      description:
+        "For the team that turned code into a company. Bold, market-ready, and backed by DERBI’s seed funding to kickstart your venture.",
+        icon: <img src="/Derbi.png" alt="Derbi" style={{ width: '88px', height: '85px', objectFit: 'contain' }} />,
+
+      position: "right"
     }
+
+    
   ];
 
   useEffect(() => {
@@ -81,7 +93,7 @@ export default function PrizePodium() {
 
   return (
     <div className="prize-wrapper">
-      <h2 className="section-title">Special Category Awards</h2>
+      <h2 className="section-title">Prize Podium</h2>
 
       <div className="podium-row">
         {podium.map((prize, index) => (
@@ -105,6 +117,7 @@ export default function PrizePodium() {
       </div>
 
       <div className="specials" ref={specialsRef}>
+      <h2 className="section-title-1">Special Category Awards</h2>
         {specialPrizes.map((prize, index) => (
           <div
             key={prize.title}

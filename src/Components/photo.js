@@ -10,7 +10,7 @@ const TeamLayout = () => {
 
   const coreMembers = [
     { id: 1, name: "kajal", role: "marketing", image: "kajal.JPG" },
-    { id: 2, name: "prateeka", role: "design ", image: "prateeka.JPG" },
+    { id: 2, name: "prateek", role: "design ", image: "prateeka.JPG" },
     { id: 3, name: "manjunatha", role: "logistics", image: "manju.JPG" },
     {id: 4, name: "gurunatha", role: "tech", image: "guru.JPG"},
     { id: 5, name: "shrihari", role: "media", image: "shrihari.JPG" },

@@ -1,147 +1,157 @@
 :root {
-    --primary-color: #00ff2a;
-    --secondary-color: #052e0b;
-    --accent-color: #069114;
-    --dark-bg: #0a0a0a;
-    --card-bg: rgba(10, 10, 10, 0.95);
-    --card-border: rgba(5, 130, 19, 0.15);
-    --shadow-glow: 0px 0px 20px rgba(5, 130, 19, 0.15);
-  }
-  
-  .prize-wrapper {
-    padding: 2rem;
-    color: #ffffff;
-    background: var(--dark-bg);
-  }
-  
-  .section-title,
-  .section-subtitle {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .section-title {
-    font-family: 'OmegaFlight', sans-serif;
-  }
-  
-  .description {
-    font-family: 'OmegaFlight','Inter', 'Segoe UI', sans-serif;
-    letter-spacing: 0.01em;
-    font-weight: 100;
-    text-align: left;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-  }
-  
-  .specials {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 6rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-  }
-  
-  .special-card {
-    background: var(--dark-bg);
-    border-radius: 16px;
-    padding: 1.5rem;
-    width: 260px;
-    text-align: center;
-    box-shadow: 0 10px 20px var(--card-border);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-left: 3px solid rgba(6, 168, 25, 0.8);
-    opacity: 0;
-    transform: translateY(100px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
-  }
-  
-  .special-card:hover {
-    transform: translateY(-8px);
-    filter: brightness(1.2);
-    border-color: rgba(6, 255, 52, 0.942);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
-                0 0 25px rgba(6, 255, 52, 0.158),
-                0 0 10px rgba(6, 255, 52, 0.145);
-  }
-  
-  .aventus-amount {
-    color: var(--primary-color);
-    font-weight: 100;
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-  }
-  
-  .aventus-amount:hover {
-    color: rgba(6, 255, 52, 0.942);
-  }
-  
-  .title {
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  
-  .emoji-wrapper {
-    width: 100%;
-    max-width: 80px;
-    height: auto;
-    margin: 0 auto 0.75rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
-    position: relative;
-  }
-  
-  .emoji {
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    margin: 0;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    line-height: 1;
-    word-break: break-word;
-  }
-  
-  .shine-icon {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    animation: shine 1.5s infinite alternate;
-  }
-  
-  .shine-icon::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.4) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    transform: skewX(-20deg);
-    animation: shine-sweep 1.5s ease-in-out 0.5s infinite;
-    pointer-events: none;
-    z-index: 1;
-  }
+  --primary-color: #00ff2a;
+  --secondary-color: #052e0b;
+  --accent-color: #069114;
+  --dark-bg: #0a0a0a;
+  --card-bg: rgba(10, 10, 10, 0.95);
+  --card-border: rgba(5, 130, 19, 0.15);
+  --shadow-glow: 0px 0px 20px rgba(5, 130, 19, 0.15);
+}
 
-  .podium-row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    gap: 4rem;
-    margin-bottom: 4rem;
-  }
-  
-  .podium-row .special-card {
+.prize-wrapper {
+  padding: 2rem;
+  color: #ffffff;
+  background: var(--dark-bg);
+}
+
+.section-title,
+.section-subtitle, .section-title-1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title, .section-title-1 {
+  font-family: 'OmegaFlight', sans-serif;
+}
+
+.description {
+  font-family: 'OmegaFlight', 'Inter', 'Segoe UI', sans-serif;
+  letter-spacing: 0.01em;
+  font-weight: 100;
+  text-align: left;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.specials {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.special-card {
+  background: var(--dark-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 20px var(--card-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-left: 3px solid rgba(6, 168, 25, 0.8);
+  /* Removed opacity and transform that were causing the animation */
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
+}
+
+.special-card:hover {
+  transform: translateY(-8px);
+  filter: brightness(1.2);
+  border-color: rgba(6, 255, 52, 0.942);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
+              0 0 25px rgba(6, 255, 52, 0.158),
+              0 0 10px rgba(6, 255, 52, 0.145);
+}
+
+.aventus-amount {
+  color: var(--primary-color);
+  font-weight: 100;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+
+.aventus-amount:hover {
+  color: rgba(6, 255, 52, 0.942);
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.emoji-wrapper {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto 0.75rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+}
+
+.emoji {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  word-break: break-word;
+}
+
+.section-title-1 {
+  color: #08da22;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-family: 'OmegaFlight';
+  margin-top: 3rem;
+}
+
+.shine-icon {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  animation: shine 1.5s infinite alternate;
+}
+
+.shine-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine-sweep 1.5s ease-in-out 0.5s infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.podium-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.podium-row .special-card {
   width: 240px;
   height: 240px;
   padding: 1rem;
@@ -152,140 +162,129 @@
   background: #ffffff10;
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.0s ease;
 }
 
-  
+.specials .special-card {
+  width: 260px;
+  height: auto;
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  100% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes shine-sweep {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* Removed the riseUp animation and all animate classes */
+/* Removed .special-card.animate rule and delays */
+/* Removed the @keyframes riseUp definition */
+
+@media (max-width: 1024px) {
+  .emoji-wrapper {
+    max-width: 70px;
+  }
+
+  .emoji {
+    font-size: clamp(1.4rem, 4.5vw, 2.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .specials {
+    gap: 3rem;
+  }
+
+  .special-card {
+    width: 90%;
+  }
+
+  .emoji-wrapper {
+    max-width: 60px;
+  }
+
+  .emoji {
+    font-size: clamp(1.3rem, 5vw, 2.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .aventus-amount {
+    padding-bottom: 0;
+  }
+
+  .specials {
+    gap: 2rem;
+  }
+
+  .emoji-wrapper {
+    max-width: 50px;
+  }
+
+  .emoji {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+}
+
+@media (max-width: 320px) {
+  .emoji-wrapper {
+    max-width: 45px;
+  }
+
+  .emoji {
+    font-size: clamp(1.1rem, 6vw, 1.6rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .emoji-wrapper {
+    max-width: 65px;
+  }
+
+  .emoji {
+    font-size: clamp(1.1rem, 2vw, 1.8rem);
+  }
+
+  .specials .section-title-1{
+    margin-bottom: -3rem;
+  }
+}
+
+@media (min-width: 750px) and (max-width:1000px) {
   .specials .special-card {
     width: 260px;
-    height: auto;
+    height: 400px;
   }
-  
-  @media (max-width: 1024px) {
-    .podium-row,
-    .specials {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+}
+
+@media (max-width: 768px) {
+  .specials {
+    gap: 3rem;
   }
-  
-  @keyframes shine {
-    0% {
-      transform: scale(1);
-      filter: brightness(1);
-    }
-    100% {
-      transform: scale(1.05);
-      filter: brightness(1.2);
-    }
+
+  .special-card {
+    width: 90%;
   }
-  
-  @keyframes shine-sweep {
-    0% {
-      left: -75%;
-    }
-    100% {
-      left: 125%;
-    }
+
+  .emoji-wrapper {
+    max-width: 60px;
   }
-  
-  .special-card.animate {
-    animation: riseUp 0.3s ease forwards;
+
+  .emoji {
+    font-size: clamp(1.3rem, 5vw, 2.2rem);
   }
-  
-  .special-card.animate.delay-1 { animation-delay: 0.3s; }
-  .special-card.animate.delay-2 { animation-delay: 0.6s; }
-  .special-card.animate.delay-3 { animation-delay: 0.9s; }
-  
-  @keyframes riseUp {
-    0% {
-      transform: translateY(100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  
-  @media (max-width: 1024px) {
-    .specials {
-      gap: 4rem;
-    }
-  
-    .emoji-wrapper {
-      max-width: 70px;
-    }
-  
-    .emoji {
-      font-size: clamp(1.4rem, 4.5vw, 2.5rem);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .specials {
-      gap: 3rem;
-    }
-  
-    .special-card {
-      width: 90%;
-    }
-  
-    .emoji-wrapper {
-      max-width: 60px;
-    }
-  
-    .emoji {
-      font-size: clamp(1.3rem, 5vw, 2.2rem);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .aventus-amount {
-      padding-bottom: 0;
-    }
-  
-    .specials {
-      gap: 2rem;
-    }
-  
-    .emoji-wrapper {
-      max-width: 50px;
-    }
-  
-    .emoji {
-      font-size: clamp(1.2rem, 6vw, 2rem);
-    }
-  }
-  
-  @media (max-width: 320px) {
-    .emoji-wrapper {
-      max-width: 45px;
-    }
-  
-    .emoji {
-      font-size: clamp(1.1rem, 6vw, 1.6rem);
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .emoji-wrapper {
-      max-width: 65px;
-    }
-  
-    .emoji {
-      font-size: clamp(1.1rem, 2vw, 1.8rem);
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .emoji-wrapper {
-      max-width: 60px;
-    }
-  
-    .emoji {
-      font-size: clamp(1rem, 1.8vw, 1.5rem);
-    }
-  }
-  
+}

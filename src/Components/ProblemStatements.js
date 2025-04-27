@@ -203,42 +203,6 @@ ${track}
           <span className="">Problem Statements</span>
         </h2>
         <div className="section-underline"></div>
-        <div
-          style={{
-            backgroundColor: "rgba(6, 184, 27, 0.1)",
-            border: "1px solid rgba(6, 184, 27, 0.2)",
-            borderRadius: "8px",
-            padding: "20px",
-            margin: "20px auto",
-            maxWidth: "800px",
-          }}
-        >
-          <p
-            style={{
-              color: "#e0e0e0",
-              fontSize: "1.1rem",
-              marginBottom: "12px",
-            }}
-          >
-            <i
-              className="fas fa-info-circle"
-              style={{ color: "#06b81b", marginRight: "8px" }}
-            ></i>
-            <strong>Track Selection & Submission Guidelines</strong>
-          </p>
-          <p
-            style={{
-              color: "#bbbdc0",
-              fontSize: "0.95rem",
-              marginBottom: "15px",
-              textAlign: "left",
-            }}
-          >
-            <strong style={{ color: "#06b81b" }}>Selection Criteria:</strong>{" "}
-            75% of selected teams will be from predefined problem statements,
-            while 25% will be from open innovation tracks.
-          </p>
-        </div>
       </div>
 
       <div className="container">
@@ -274,6 +238,44 @@ ${track}
             >
               Predefined Problem Statement Tracks
             </h3>
+            <div
+              style={{
+                backgroundColor: "rgba(6, 184, 27, 0.1)",
+                border: "1px solid rgba(6, 184, 27, 0.2)",
+                borderRadius: "8px",
+                padding: "20px",
+                margin: "20px auto",
+                maxWidth: "800px",
+              }}
+            >
+              <p
+                style={{
+                  color: "#e0e0e0",
+                  fontSize: "1.1rem",
+                  marginBottom: "12px",
+                }}
+              >
+                <i
+                  className="fas fa-info-circle"
+                  style={{ color: "#06b81b", marginRight: "8px" }}
+                ></i>
+                <strong>Track Selection & Submission Guidelines</strong>
+              </p>
+              <p
+                style={{
+                  color: "#bbbdc0",
+                  fontSize: "0.95rem",
+                  marginBottom: "15px",
+                  textAlign: "left",
+                }}
+              >
+                <strong style={{ color: "#06b81b" }}>
+                  Selection Criteria:
+                </strong>{" "}
+                75% of selected teams will be from predefined problem
+                statements, while 25% will be from open innovation tracks.
+              </p>
+            </div>
             <p
               style={{
                 color: "#bbbdc0",
@@ -348,24 +350,6 @@ ${track}
                         "0 2px 4px rgba(0, 0, 0, 0.2)";
                     }}
                   >
-                    {/* <div
-                      style={{
-                        position: "absolute",
-                        top: "10px",
-                        right: "10px",
-                        backgroundColor: `${trackColors[activeTrack]}20`,
-                        padding: "4px 8px",
-                        borderRadius: "4px",
-                        fontSize: "0.8rem",
-                        color: trackColors[activeTrack],
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "4px",
-                      }}
-                    >
-                      <i className="fas fa-copy"></i>
-                      Click to copy
-                    </div> */}
                     <h4
                       style={{
                         color: trackColors[activeTrack],
@@ -377,18 +361,80 @@ ${track}
                     <p
                       style={{
                         marginBottom: "10px",
-                        fontSize: "1.1rem",
+                        fontFamily: "consolas",
+                        fontSize: "1rem",
                         color: "#ffffff",
                       }}
                     >
                       {ps.description}
                     </p>
-                    <p style={{ fontSize: "0.9rem", color: "#cccccc" }}>
+                    <p
+                      style={{
+                        fontSize: "0.9rem",
+                        fontFamily: "consolas",
+                        color: "#cccccc",
+                      }}
+                    >
                       <strong style={{ color: "#ffffff" }}>Feasibility:</strong>{" "}
                       {ps.feasibility}
                     </p>
                   </div>
                 ))}
+
+                {/* Add your own problem statement section */}
+                <div
+                  style={{
+                    marginTop: "30px",
+                    padding: "20px",
+                    border: `1px solid ${trackColors[activeTrack]}40`,
+                    borderRadius: "8px",
+                    backgroundColor: "#1a1a1a",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+                  }}
+                >
+                  <h4
+                    style={{
+                      color: trackColors[activeTrack],
+                      marginBottom: "15px",
+                      textAlign: "center",
+                    }}
+                  >
+                    Bring Your Own Problem Statement
+                  </h4>
+                  <p
+                    style={{
+                      color: "#ffffff",
+                      marginBottom: "20px",
+                      textAlign: "center",
+                    }}
+                  >
+                    Have a unique problem statement in mind? Use our template to
+                    submit your own idea!
+                  </p>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <button
+                      onClick={() => copyToClipboard(activeTrack)}
+                      style={{
+                        backgroundColor: "transparent",
+                        border: `1px solid ${trackColors[activeTrack]}`,
+                        color: trackColors[activeTrack],
+                        padding: "10px 20px",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                        fontSize: "1rem",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = `${trackColors[activeTrack]}20`;
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "transparent";
+                      }}
+                    >
+                      Copy Template
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
