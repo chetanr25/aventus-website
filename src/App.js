@@ -7,12 +7,7 @@ import Sponsors from "./Components/Sponsors";
 import Tracks from "./Components/Tracks";
 import ProblemStatements from "./Components/ProblemStatements";
 import About from "./Components/About";
-import Glimpse from "./Components/Glimpse";
-import image1 from "./images/1.png";
-import image2 from "./images/2.png";
-import image3 from "./images/3.png";
-import image4 from "./images/4.png";
-import image5 from "./images/5.png";
+// import Glimpse from "./Components/Glimpse";
 import "./App.css";
 import Photo from "./Components/photo.js";
 import Map from "./Components/map.js";
@@ -24,7 +19,7 @@ import PrizePool from "./Components/PrizePool";
 import PrizePodium from "./Components/PrizePodiumdesc.js";
 
 function MainContent() {
-  const images = [image1, image2, image3, image4, image5];
+  // const images = [image1, image2, image3, image4, image5];
 
   useEffect(() => {
     // Hide cursor on load
@@ -50,7 +45,7 @@ function MainContent() {
       <ToastContainer />
       <div className="conta" style={{ background: "transparent" }}>
         <Landing />
-        <About />
+        {/* <About /> */}
         <div
           className="individual"
           style={{
@@ -64,19 +59,26 @@ function MainContent() {
         <div>
           <PrizePool />
         </div>
-        <PrizePodium/>
+        <PrizePodium />
         <EventSchedule />
         <div style={{ padding: "20px" }}>
-          <IndividualSponsor images={images} />
+          <IndividualSponsor images />
         </div>
         <Sponsors />
-        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div
+          className="glimpse"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <h1>Winners of Aventus 2.0</h1>
         </div>
-        <div style={{ padding: "20px" }}>
+        {/* <div style={{ padding: "20px" }}>
         
           <Glimpse images={images} />
-        </div>
+        </div> */}
         <Faqs />
         <div
           style={{
@@ -101,11 +103,9 @@ function MainContent() {
 }
 
 function App() {
-
-   
   return (
     <Router>
-     <MainContent />
+      <MainContent />
     </Router>
   );
 }

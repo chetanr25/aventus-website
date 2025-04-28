@@ -1,11 +1,11 @@
-import React from 'react';
-import './css/prevsponsors.css';
+import React from "react";
+import "./css/prevsponsors.css";
 
 const PrevSponsors = () => {
   return (
     <div className="prev-sponsors-section">
       <div className="prev-sponsors-content">
-        <h2>Previous Sponsors</h2>
+        <h2>Sponsors</h2>
         <div className="sponsors-grid">
           {/* Add your previous sponsors here */}
           <div className="sponsor-card">
@@ -21,4 +21,4 @@ const PrevSponsors = () => {
   );
 };
 
-export default PrevSponsors; 
+export default PrevSponsors;
