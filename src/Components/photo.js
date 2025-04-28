@@ -29,7 +29,7 @@ const TeamLayout = () => {
       {hodData.map((hod) => (
         <div key={hod.id}>
           <div className="hod">
-            <img src={hod.image} alt={hod.name} className="hod-img" />
+            <img src={hod.image}  className="hod-img" />
           </div>
           <div className="member-info">
             <h4>{hod.name}</h4>
@@ -45,7 +45,7 @@ const TeamLayout = () => {
       {coreMembers.map((member) => (
         <div key={member.id}>
           <div className="core-member">
-            <img src={member.image} alt={member.name} className="core-member-img" />
+            <img src={member.image}  className="core-member-img" />
           </div>
           <div className="member-info">
             <h4>{member.name}</h4>
@@ -60,7 +60,7 @@ const TeamLayout = () => {
         {groupPhotos.map((photo) => (
           <div key={photo.id} >
             <div className="group-photo">
-            <img src={photo.image} alt={`Team Group Photo ${photo.id}`} className="group-img" />
+            <img src={photo.image} className="group-img" />
           </div>
           <div  className="photo-caption" >
             {photo.caption}
