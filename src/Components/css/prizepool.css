@@ -247,7 +247,9 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+
 }
 
 .feature-item {
@@ -258,8 +260,8 @@
   transition: all 0.3s ease;
   min-width: 200px;
   /* Added flex basis to maintain consistent sizing */
-  flex: 1 1 calc(33.333% - 2rem);
-  max-width: calc(33.333% - 2rem);
+  flex: 1 1 calc(25% - 2rem);
+  max-width: calc(25% - 2rem);
 }
 
 .feature-item:hover {
