@@ -63,7 +63,7 @@ function Landing() {
   }, []);
 
   useEffect(() => {
-    let date = new Date("April 30, 2025 23:59:00").getTime();
+    let date = new Date("may 8, 2025 23:59:00").getTime();
     setInterval(function () {
       let now = new Date().getTime();
       let dist = date - now;
