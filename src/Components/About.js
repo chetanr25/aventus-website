@@ -37,7 +37,7 @@ export default function About() {
             </p>
             <p>
             Choose your battlefield: AI in Healthcare, AI in Cybersecurity, AI in Edge 
-            Computing, or AI in Defense & Disaster Response—four tracks, endless possibilities.
+            Computing and AI in Defense & Disaster Response—four tracks, endless possibilities.
             </p>
             <p>
               Join us at Aventus as we foster innovation, nurture talent, and
