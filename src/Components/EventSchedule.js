@@ -58,15 +58,8 @@ const EventSchedule = () => {
       const currentDistance = scrollY - startPoint;
       const progress = Math.max(0, Math.min(1, currentDistance / totalDistance));
       
-      // Apply the progress to the line height with stronger glow for visibility
+      // Apply the progress to the line height
       line.style.height = `${progress * 100}%`;
-      
-      if (isSectionVisible) {
-        line.style.opacity = "1";
-        line.style.boxShadow = "0 0 15px #00FF2A, 0 0 30px #00FF2A"; // Stronger glow
-      } else {
-        line.style.opacity = "0";
-      }
       
       // Update dots based on their position relative to scroll
       dotRefs.current.forEach((dot, idx) => {
@@ -79,8 +72,8 @@ const EventSchedule = () => {
         // This dot has been passed if it's above the center of the viewport
         if (dotPosition < viewportCenter) {
           dot.classList.add("active");
-          // Add extra glow to active dots for better visibility
-          dot.style.boxShadow = "0 0 10px #00FF2A, 0 0 20px #00FF2A";
+          // Add a milder glow to active dots
+          dot.style.boxShadow = "0 0 8px #00ff2a, 0 0 12px #00ff2a";
         } else {
           dot.classList.remove("active");
           dot.style.boxShadow = "";
@@ -119,14 +112,22 @@ const EventSchedule = () => {
         {/* Static timeline line background */}
         <div className="absolute left-4 md:left-1/2 top-0 bottom-0 transform md:-translate-x-1/2 w-1.5 bg-gray-800 z-0 timeline-line" />
 
-        {/* Scroll-linked glowing progress line */}
+        {/* Always visible baseline glow line */}
+        <div
+          className="absolute left-4 md:left-1/2 top-0 bottom-0 transform md:-translate-x-1/2 w-1.5 bg-[#00ff2a]/40 z-5 timeline-line"
+          style={{
+            boxShadow: "0 0 5px #00ff2a, 0 0 10px #00ff2a",
+            opacity: 0.5,
+          }}
+        />
+
+        {/* Scroll-linked progress line with milder glow */}
         <div
           ref={progressRef}
-          className={`absolute left-4 md:left-1/2 top-0 bottom-0 transform md:-translate-x-1/2 w-1.5 bg-[#00FF2A] z-10 transition-all duration-500 ${isVisible ? 'animate-pulse' : ''}`}
+          className="absolute left-4 md:left-1/2 top-0 bottom-0 transform md:-translate-x-1/2 w-1.5 bg-[#00ff2a] z-10 transition-all duration-300"
           style={{
             height: "0%",
-            boxShadow: "0 0 15px #00FF2A, 0 0 30px #00FF2A",
-            opacity: 0,
+            boxShadow: "0 0 8px #00ff2a, 0 0 12px #00ff2a",
           }}
         />
 
@@ -144,17 +145,17 @@ const EventSchedule = () => {
                 <div className="md:hidden pl-12 mb-6 relative">
                   <div
                     ref={(el) => (dotRefs.current[index] = el)}
-                    className="absolute left-4 top-6 w-4 h-4 bg-black border-2 border-[#00FF2A] rounded-full z-20 glow-dot timeline-dot transition-all duration-300"
+                    className="absolute left-4 top-6 w-4 h-4 bg-black border-2 border-[#00ff2a] rounded-full z-20 glow-dot timeline-dot transition-all duration-300"
                   />
-                  <div className="absolute left-4 top-6 w-8 h-1 bg-[#00FF2A] transform translate-y-1 timeline-connector" />
-                  <div className="bg-black/50 backdrop-blur-sm border border-[#00FF2A] p-4 rounded-md w-full event-card">
+                  <div className="absolute left-4 top-6 w-8 h-1 bg-[#00ff2a] transform translate-y-1 timeline-connector" />
+                  <div className="bg-black/50 backdrop-blur-sm border border-[#00ff2a] p-4 rounded-md w-full event-card">
                     {event.day ? (
-                      <h3 className="text-lg font-mono text-[#00FF2A] font-bold mb-2">
+                      <h3 className="text-lg font-mono text-[#00ff2a] font-bold mb-2">
                         {event.day}
                       </h3>
                     ) : (
                       <>
-                        <h3 className="text-lg font-mono text-[#00FF2A] font-bold mb-2">
+                        <h3 className="text-lg font-mono text-[#00ff2a] font-bold mb-2">
                           {event.time}
                         </h3>
                         <p className="text-green-200 text-sm">{event.title}</p>
@@ -167,14 +168,14 @@ const EventSchedule = () => {
                 {isLeft ? (
                   <>
                     <div className="hidden md:block md:w-1/2 pr-8 flex justify-end">
-                      <div className="ml-auto w-full max-w-md bg-black/50 backdrop-blur-sm border border-[#00FF2A] p-6 rounded-md event-card">
+                      <div className="ml-auto w-full max-w-md bg-black/50 backdrop-blur-sm border border-[#00ff2a] p-6 rounded-md event-card">
                         {event.day ? (
-                          <h3 className="text-xl font-mono text-[#00FF2A] font-bold mb-2">
+                          <h3 className="text-xl font-mono text-[#00ff2a] font-bold mb-2">
                             {event.day}
                           </h3>
                         ) : (
                           <>
-                            <h3 className="text-xl font-mono text-[#00FF2A] font-bold mb-2">
+                            <h3 className="text-xl font-mono text-[#00ff2a] font-bold mb-2">
                               {event.time}
                             </h3>
                             <p className="text-green-200 font-light">{event.title}</p>
@@ -184,7 +185,7 @@ const EventSchedule = () => {
                     </div>
                     <div
                       ref={(el) => (dotRefs.current[index] = el)}
-                      className="hidden md:block absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 bg-black border-2 border-[#00FF2A] rounded-full z-20 glow-dot timeline-dot transition-all duration-300"
+                      className="hidden md:block absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 bg-black border-2 border-[#00ff2a] rounded-full z-20 glow-dot timeline-dot transition-all duration-300"
                     />
                     <div className="hidden md:block md:w-1/2" />
                   </>
@@ -193,17 +194,17 @@ const EventSchedule = () => {
                     <div className="hidden md:block md:w-1/2" />
                     <div
                       ref={(el) => (dotRefs.current[index] = el)}
-                      className="hidden md:block absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 bg-black border-2 border-[#00FF2A] rounded-full z-20 glow-dot timeline-dot transition-all duration-300"
+                      className="hidden md:block absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 bg-black border-2 border-[#00ff2a] rounded-full z-20 glow-dot timeline-dot transition-all duration-300"
                     />
                     <div className="hidden md:block md:w-1/2 pl-8">
-                      <div className="w-full max-w-md bg-black/50 backdrop-blur-sm border border-[#00FF2A] p-6 rounded-md event-card">
+                      <div className="w-full max-w-md bg-black/50 backdrop-blur-sm border border-[#00ff2a] p-6 rounded-md event-card">
                         {event.day ? (
-                          <h3 className="text-xl font-mono text-[#00FF2A] font-bold mb-2">
+                          <h3 className="text-xl font-mono text-[#00ff2a] font-bold mb-2">
                             {event.day}
                           </h3>
                         ) : (
                           <>
-                            <h3 className="text-xl font-mono text-[#00FF2A] font-bold mb-2">
+                            <h3 className="text-xl font-mono text-[#00ff2a] font-bold mb-2">
                               {event.time}
                             </h3>
                             <p className="text-green-200 font-light">{event.title}</p>
