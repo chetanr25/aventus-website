@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./css/landing.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faLinkedin,
   faDiscord,
-  faTelegram,
+  // faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
 import "aos/dist/aos.css";
 import { swarmBackground } from "threejs-toys";
 
 function Landing() {
-
-  const [time, setTime] = useState({});
+  // const [time, setTime] = useState({});
 
   useEffect(() => {
     // Initialize the background effect
@@ -62,20 +61,20 @@ function Landing() {
     // };
   }, []);
 
-  useEffect(() => {
-    let date = new Date("April 30, 2025 23:59:00").getTime();
-    setInterval(function () {
-      let now = new Date().getTime();
-      let dist = date - now;
-      let time = {
-        days: Math.floor(dist / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((dist % (1000 * 60)) / 1000),
-      };
-      setTime(time);
-    }, 1000);
-  }, []);
+  // useEffect(() => {
+  //   let date = new Date("May 8, 2025 23:59:00").getTime();
+  //   setInterval(function () {
+  //     let now = new Date().getTime();
+  //     let dist = date - now;
+  //     let time = {
+  //       days: Math.floor(dist / (1000 * 60 * 60 * 24)),
+  //       hours: Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+  //       minutes: Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60)),
+  //       seconds: Math.floor((dist % (1000 * 60)) / 1000),
+  //     };
+  //     setTime(time);
+  //   }, 1000);
+  // }, []);
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -104,7 +103,7 @@ function Landing() {
             <h1>
               AVENTUS<span className="accent">3.0</span>
             </h1>
-            <a
+            {/* <a
               alignContent="center"
               alignItems="center"
               href="https://aventus-3.devfolio.co"
@@ -135,7 +134,7 @@ function Landing() {
                 />
                 Apply Now on Devfolio
               </button>
-            </a>
+            </a> */}
             <div className="tagline">
               <p data-aos="fade-up" data-aos-delay="400">
                 Where AI Thrives and Technology Flourishes.
@@ -156,21 +155,6 @@ function Landing() {
               <span>17th - 18th May 2025</span>
             </div>
             <div className="event-type">24-hour national level hackathon</div>
-          </div>
-
-          <div
-            className="action-buttons"
-            data-aos="fade-up"
-            data-aos-delay="1000"
-          >
-            <div className="devbtn">
-              <div
-                className="apply-button"
-                data-hackathon-slug="aventus-3-0"
-                data-button-theme="light"
-                style={{ height: "44px", width: "300px" }}
-              ></div>
-            </div>
           </div>
         </div>
 
@@ -217,7 +201,7 @@ function Landing() {
                   <FontAwesomeIcon icon={faDiscord} />
                 </button>
               </a>
-              <a
+              {/* <a
                 href="https://t.me/+SebssWzmQMVmZGI1"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -225,34 +209,64 @@ function Landing() {
                 <button className="social-btn telegram">
                   <FontAwesomeIcon icon={faTelegram} />
                 </button>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Timer for registeration ending */}
-
-      <div className="timecount">
-        <div className="t">Registeration ends in</div>
-        <div className="time">
-          <div className="days cele glass">
-            <p className="celep">{time.days || 0}</p>
-            <span className="celep">Days</span>
-          </div>
-          <div className="hours cele glass">
-            <p className="celep">{time.hours || 0}</p>
-            <span className="celep">Hours</span>
-          </div>
-          <div className="minutes cele glass">
-            <p className="celep">{time.minutes || 0}</p>
-            <span className="celep">Minutes</span>
-          </div>
-          <div className="seconds cele glass">
-            <p className="celep">{time.seconds || 0}</p>
-            <span className="celep">Seconds</span>
-          </div>
-        </div>
+      <div
+        className="deadline-container"
+        style={{
+          textAlign: "center",
+          padding: "20px",
+          alignContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {/* <div
+          style={{
+            backgroundColor: "rgba(0, 166, 158, 0.1)",
+            padding: "12px",
+            borderRadius: "8px",
+            marginBottom: "15px",
+            border: "1px solid #10e110",
+            alignContent: "center",
+          }}
+        >
+          <p style={{ color: "#fff", fontSize: "1.1em" }}>
+            🔔 Registration deadline extended till May 8th, 2025
+          </p>
+          {/* <div className="timecount">
+            <div
+              className="t"
+              style={{
+                fontSize: "1.5em",
+                color: "#00FF2A",
+              }}
+            >
+              Time Remaining
+            </div>
+            <div className="time">
+              <div className="days cele glass">
+                <p className="celep">{time.days || 0}</p>
+                <span className="celep">Days</span>
+              </div>
+              <div className="hours cele glass">
+                <p className="celep">{time.hours || 0}</p>
+                <span className="celep">Hours</span>
+              </div>
+              <div className="minutes cele glass">
+                <p className="celep">{time.minutes || 0}</p>
+                <span className="celep">Minutes</span>
+              </div>
+              <div className="seconds cele glass">
+                <p className="celep">{time.seconds || 0}</p>
+                <span className="celep">Seconds</span>
+              </div>
+            </div>
+          </div> 
+        </div> */}
       </div>
 
       {/* Welcome message without AOS animations */}

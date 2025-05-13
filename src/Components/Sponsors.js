@@ -11,7 +11,7 @@ function Sponsors() {
     >
       <section className="text-gray-600 body-font h-full pt-10 w-full sponsors">
         <div className="container text-4xl mx-auto w-full text-center text-white">
-          Our Sponsors
+          Previous Sponsors
         </div>
         <div className="container px-5 py-8 mx-auto">
           <div className="flex flex-wrap mark">

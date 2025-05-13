@@ -12,7 +12,7 @@ const EventSchedule = () => {
       description: "The chase is on, claim your spot.",
     },
     {
-      time: "April 30",
+      time: "May 8",
       title: "Registration ends",
       description: "Your last shot to get in.",
     },
@@ -35,7 +35,7 @@ const EventSchedule = () => {
       time: "May 18, 4:00 PM",
       title: "Hackathon Ends",
       description: "Showcase your final projects and celebrate with awards.",
-    }
+    },
   ];
 
   useEffect(() => {
@@ -52,7 +52,8 @@ const EventSchedule = () => {
       ref={timelineSectionRef}
       className="relative py-12 md:py-20 min-h-screen"
     >
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-8 md:mb-12 tracking-wider font-Omega Flight px-4 fade-in"
+      <h2
+        className="text-center text-3xl md:text-4xl font-bold mb-8 md:mb-12 tracking-wider font-Omega Flight px-4 fade-in"
         style={{ color: "#00FF2A" }}
       >
         EVENT SCHEDULE
@@ -100,7 +101,9 @@ const EventSchedule = () => {
                       <h3 className="text-xl font-mono text-[#00FF2A] font-bold mb-2">
                         {event.time} - {event.title}
                       </h3>
-                      <p className="text-green-200 font-light">{event.description}</p>
+                      <p className="text-green-200 font-light">
+                        {event.description}
+                      </p>
                     </div>
                   </div>
                   <div className="hidden md:block absolute left-1/2 top-6 transform -translate-x-1/2 w-3 h-3 bg-black border-2 border-[#00FF2A] rounded-full z-20 glow-dot" />
@@ -115,7 +118,9 @@ const EventSchedule = () => {
                       <h3 className="text-xl font-mono text-[#00FF2A] font-bold mb-2">
                         {event.time} - {event.title}
                       </h3>
-                      <p className="text-green-200 font-light">{event.description}</p>
+                      <p className="text-green-200 font-light">
+                        {event.description}
+                      </p>
                     </div>
                   </div>
                 </>

@@ -55,7 +55,7 @@ function MainContent() {
           }}
         ></div>
         <Tracks />
-        <ProblemStatements />
+        {/* <ProblemStatements /> */}
         <div>
           <PrizePool />
         </div>
@@ -65,7 +65,7 @@ function MainContent() {
           <IndividualSponsor images />
         </div>
         <Sponsors />
-        <div
+        {/* <div
           className="glimpse"
           style={{
             display: "flex",
@@ -74,7 +74,7 @@ function MainContent() {
           }}
         >
           <h1>Winners of Aventus 2.0</h1>
-        </div>
+        </div> */}
         {/* <div style={{ padding: "20px" }}>
         
           <Glimpse images={images} />

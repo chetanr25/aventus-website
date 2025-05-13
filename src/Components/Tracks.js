@@ -1,47 +1,50 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./css/tracks.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHeartbeat,
+  faShieldHalved,
+  faMicrochip,
+  faJetFighter,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Tracks = () => {
-  // Add Font Awesome for icons
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://kit.fontawesome.com/b2d5cf2464.js";
-    script.crossOrigin = "anonymous";
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
   const tracks = [
     {
       title: "AI in Healthcare",
       description:
-        "Can AI be a doctor’s best assistant? Think big—early disease detection, virtual consultations that feel real or AI predicting life-threatening conditions before they happen. If you could build something that truly transforms healthcare, what would it be?",
-      color: "#06b81bcc", // Reduced green intensity
-      icon: "fas fa-heartbeat",
+        "Can AI be a doctor's best assistant? Think big—early disease detection, virtual consultations that feel real or AI predicting life-threatening conditions before they happen. If you could build something that truly transforms healthcare, what would it be?",
+      color: "#06b81bcc",
+      icon: (
+        <FontAwesomeIcon icon={faHeartbeat} style={{ fontSize: "4.5rem" }} />
+      ),
     },
     {
       title: "AI in Cyber Security",
       description:
-        "What if security was smarter, faster and always one step ahead? Imagine AI-powered systems detecting threats in real time, stopping cyberattacks before they happen and adapting on the fly—no delays, no vulnerabilities. The future of cybersecurity isn’t reactive—it’s proactive. How would you build it?",
-      color: "#059b15cc", // Reduced green intensity
-      icon: "fas fa-shield-alt",
+        "In a world where digital threats evolve by the second, how can AI be our digital guardian? From predicting cyber attacks to creating self-healing systems, show us how AI can make our digital world safer.",
+      color: "#06a819cc",
+      icon: (
+        <FontAwesomeIcon icon={faShieldHalved} style={{ fontSize: "4.5rem" }} />
+      ),
     },
     {
       title: "AI in Edge Computing",
       description:
-        "What if AI could process data instantly, right where it’s created? No cloud delays—just real-time automation, AI-powered smart devices and ultra-fast decision-making at the source. How will you build the future of edge intelligence? ",
-      color: "#028a15cc", // Slightly deeper green for a professional look
-      icon: "fas fa-microchip",
+        "How can AI work its magic right on your device? Think smart homes that actually learn, AR experiences that feel real, or devices that adapt to you. Show us how AI at the edge can transform daily tech.",
+      color: "#069819cc",
+      icon: (
+        <FontAwesomeIcon icon={faMicrochip} style={{ fontSize: "4.5rem" }} />
+      ),
     },
     {
-      title: "AI in Defense and Disaster Response",
+      title: "AI in Defense & Disaster Response",
       description:
-        "How can AI act fast in crisis situations? Whether it’s predicting disasters, coordinating rescue missions, or making split-second decisions, AI has the power to save lives when every second counts. What will you build to make a difference? ",
-      color: "#06a819cc", // Reduced green intensity
-      icon: "fas fa-fighter-jet",
+        "How can AI act fast in crisis situations? Whether it's predicting disasters, coordinating rescue missions, or making split-second decisions, AI has the power to save lives when every second counts. What will you build to make a difference?",
+      color: "#06a819cc",
+      icon: (
+        <FontAwesomeIcon icon={faJetFighter} style={{ fontSize: "4.5rem" }} />
+      ),
     },
   ];
 
@@ -71,24 +74,12 @@ const Tracks = () => {
                   borderRight: `1px solid ${track.color}20`,
                   borderBottom: `1px solid ${track.color}20`,
                   padding: "32px",
-                  // Increased padding
                 }}
               >
                 <div className="track-background"></div>
                 <div className="circuit-pattern"></div>
                 <div className="track-content">
-                  <div className="track-icon">
-                    <i
-                      className={track.icon}
-                      style={{
-                        fontSize: "4.5rem", // Slightly reduced size
-                        filter:
-                          track.icon === "fas fa-fighter-jet"
-                            ? "brightness(1.2)"
-                            : "none",
-                      }}
-                    ></i>
-                  </div>
+                  <div className="track-icon">{track.icon}</div>
                   <div className="track-item-header">
                     <h1>{track.title}</h1>
                   </div>
