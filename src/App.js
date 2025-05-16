@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Landing from "./Components/Landing";
-import Sponsors from "./Components/Sponsors";
+import OurSponsors from "./Components/OurSponsors";
 import Tracks from "./Components/Tracks";
 import ProblemStatements from "./Components/ProblemStatements";
 import About from "./Components/About";
@@ -64,7 +64,7 @@ function MainContent() {
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images />
         </div>
-        <Sponsors />
+       
         {/* <div
           className="glimpse"
           style={{
@@ -79,6 +79,7 @@ function MainContent() {
         
           <Glimpse images={images} />
         </div> */}
+        <OurSponsors />
         <Faqs />
         <div
           style={{
