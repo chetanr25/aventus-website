@@ -89,14 +89,14 @@ function MainContent() {
         >
           <Photo />
         </div>
-        <div className="contact-map-container">
+        {/* <div className="contact-map-container">
           <div className="contact-section">
             <ContactUs />
           </div>
           <div className="map">
             <Map />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
