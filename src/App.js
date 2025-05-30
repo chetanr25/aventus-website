@@ -9,7 +9,7 @@ import ProblemStatements from "./Components/ProblemStatements";
 import About from "./Components/About";
 // import Glimpse from "./Components/Glimpse";
 import "./App.css";
-import Photo from "./Components/photo.js";
+//import Photo from "./Components/photo.js";
 import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
@@ -87,7 +87,7 @@ function MainContent() {
             flexDirection: "column",
           }}
         >
-          <Photo />
+
         </div>
         <div className="contact-map-container">
           <div className="contact-section">
