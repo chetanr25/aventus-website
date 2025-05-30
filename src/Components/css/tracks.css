@@ -1,5 +1,5 @@
 /* Track-specific variables */
-#Tracks {
+#Tracks/* {
   --primary-color: #00ff2a;
   --secondary-color: #052e0b;
   --accent-color: #069114;
@@ -329,4 +329,4 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap');*/
