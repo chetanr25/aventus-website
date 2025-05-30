@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import Lottie from 'react-lottie'
 function TracksAnimation({animationData}) {
     const defaultOptions = {
@@ -14,4 +14,4 @@ function TracksAnimation({animationData}) {
   )
 }
 
-export default TracksAnimation
+export default TracksAnimation*/

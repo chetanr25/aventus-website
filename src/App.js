@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Landing from "./Components/Landing";
 import OurSponsors from "./Components/OurSponsors";
-import Tracks from "./Components/Tracks";
+//import Tracks from "./Components/Tracks";
 import ProblemStatements from "./Components/ProblemStatements";
 import About from "./Components/About";
 // import Glimpse from "./Components/Glimpse";
@@ -54,7 +54,6 @@ function MainContent() {
             alignItems: "center",
           }}
         ></div>
-        <Tracks />
         {/* <ProblemStatements /> */}
         <div>
           <PrizePool />
