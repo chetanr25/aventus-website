@@ -5,15 +5,15 @@ import "react-toastify/dist/ReactToastify.css";
 import Landing from "./Components/Landing";
 import OurSponsors from "./Components/OurSponsors";
 //import Tracks from "./Components/Tracks";
-import ProblemStatements from "./Components/ProblemStatements";
-import About from "./Components/About";
+// import ProblemStatements from "./Components/ProblemStatements";
+// import About from "./Components/About";
 // import Glimpse from "./Components/Glimpse";
 import "./App.css";
 //import Photo from "./Components/photo.js";
-import Map from "./Components/map.js";
+// import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
-import ContactUs from "./Components/ContactUs";
+// import ContactUs from "./Components/ContactUs";
 // import EventSchedule from "./Components/EventSchedule.js";
 
 function MainContent() {
@@ -57,7 +57,7 @@ function MainContent() {
           <PrizePool />
         </div>
         <PrizePodium /> */}
-        // <EventSchedule />
+         {/* <EventSchedule /> */}
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images />
         </div>
