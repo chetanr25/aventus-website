@@ -152,7 +152,7 @@ function Landing() {
           >
             <div className="date-badge">
               <span className="date-icon">📅</span>
-              <span>17th - 18th May 2025</span>
+              <span>Completed</span>
             </div>
             <div className="event-type">24-hour national level hackathon</div>
           </div>
