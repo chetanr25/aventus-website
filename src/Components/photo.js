@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "../Components/css/photos.css";
 
 const TeamLayout = () => {
@@ -33,8 +33,8 @@ const TeamLayout = () => {
 
   return (
     <div className="container">
-      {/* HODs Section */}
-      <h2 className="section-title">Department Heads</h2>
+      {/* HODs Section *///}
+     /* <h2 className="section-title">Department Heads</h2>
       <div className="hod-container">
         {hodData.map((hod) => (
           <div key={hod.id}>
@@ -49,8 +49,8 @@ const TeamLayout = () => {
         ))}
       </div>
 
-      {/* Core Team Members - New Layout */}
-      <h2 className="section-title">Core Team Members</h2>
+      {/* Core Team Members - New Layout *///}
+     /* <h2 className="section-title">Core Team Members</h2>
       <div className="core-members-container">
         {coreMembers.map((member) => (
           <div key={member.id}>
@@ -80,4 +80,4 @@ const TeamLayout = () => {
   );
 };
 
-export default TeamLayout;
+export default TeamLayout;*/
