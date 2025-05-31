@@ -15,8 +15,6 @@ import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
 import EventSchedule from "./Components/EventSchedule.js";
-import PrizePool from "./Components/PrizePool";
-import PrizePodium from "./Components/PrizePodiumdesc.js";
 
 function MainContent() {
   // const images = [image1, image2, image3, image4, image5];
@@ -55,10 +53,10 @@ function MainContent() {
           }}
         ></div>
         {/* <ProblemStatements /> */}
-        <div>
+        {/* <div>
           <PrizePool />
         </div>
-        <PrizePodium />
+        <PrizePodium /> */}
         <EventSchedule />
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images />
