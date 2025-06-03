@@ -1,0 +1,153 @@
+/* Import Omega Flight font if available */
+/* @import url('https://fonts.googleapis.com/css2?family=Omega+Flight&display=swap'); */
+
+/* Alternative: If you have the font file locally, use this instead: */
+@font-face {
+  font-family: 'Omega Flight';
+  src: url('../../fonts/OmegaFlight-BWjvx.otf') format('opentype'); /* Updated path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.thank-you-section {
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.thank-you-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #000; /* Dark background for the content box */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 190, 102); /* Green border/glow */
+    box-shadow: 0 0 15px rgb(0, 190, 102); /* Green glow effect */
+    position: relative;
+    overflow: hidden;
+}
+
+.thank-you-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.thank-you-content h2 {
+    color: #00ff00 !important;
+    margin-bottom: 30px;
+    font-size: 3em;
+    font-family: 'Omega Flight', 'Arial Black', sans-serif !important;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.thank-you-text {
+    text-align: left;
+}
+
+.thank-you-content p {
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.thank-you-team {
+    color: #00ff00 !important;
+    text-align: right;
+    font-weight: normal;
+    margin-top: 30px;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* Floating particles */
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.particle-1 {
+    top: 20%;
+    left: 10%;
+    animation: float1 3s ease-in-out infinite;
+}
+
+.particle-2 {
+    top: 35%;
+    left: 22%;
+    animation: float2 3s ease-in-out infinite 0.5s;
+}
+
+.particle-3 {
+    top: 50%;
+    left: 34%;
+    animation: float3 3s ease-in-out infinite 1s;
+}
+
+.particle-4 {
+    top: 65%;
+    left: 46%;
+    animation: float4 3s ease-in-out infinite 1.5s;
+}
+
+.particle-5 {
+    top: 80%;
+    left: 58%;
+    animation: float5 3s ease-in-out infinite 2s;
+}
+
+.particle-6 {
+    top: 95%;
+    left: 70%;
+    animation: float6 3s ease-in-out infinite 2.5s;
+}
+
+/* Keyframe animations */
+@keyframes float1 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes float4 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes float5 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-18px); }
+}
+
+@keyframes float6 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}

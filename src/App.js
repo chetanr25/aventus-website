@@ -12,9 +12,10 @@ import "./App.css";
 //import Photo from "./Components/photo.js";
 // import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
-import Faqs from "./Components/Faqs";
+// import Faqs from "./Components/Faqs";
 // import ContactUs from "./Components/ContactUs";
 // import EventSchedule from "./Components/EventSchedule.js";
+import ThankYou from "./Components/ThankYou";
 
 function MainContent() {
   // const images = [image1, image2, image3, image4, image5];
@@ -57,9 +58,9 @@ function MainContent() {
           <PrizePool />
         </div>
         <PrizePodium /> */}
-         {/* <EventSchedule /> */}
+        {/* <EventSchedule /> */}
         <div style={{ padding: "20px" }}>
-          <IndividualSponsor images />
+          <IndividualSponsor />
         </div>
        
         {/* <div
@@ -72,12 +73,9 @@ function MainContent() {
         >
           <h1>Winners of Aventus 2.0</h1>
         </div> */}
-        {/* <div style={{ padding: "20px" }}>
-        
-          <Glimpse images={images} />
-        </div> */}
+        <ThankYou />
         <OurSponsors />
-        <Faqs />
+        {/* <Faqs /> */}
         <div
           style={{
             display: "flex",
@@ -85,7 +83,6 @@ function MainContent() {
             flexDirection: "column",
           }}
         >
-
         </div>
         {/* <div className="contact-map-container">
           <div className="contact-section">
