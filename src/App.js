@@ -12,8 +12,8 @@ import "./App.css";
 //import Photo from "./Components/photo.js";
 // import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
-import Faqs from "./Components/Faqs";
-import ContactUs from "./Components/ContactUs";
+// import Faqs from "./Components/Faqs";
+// import ContactUs from "./Components/ContactUs";
 // import EventSchedule from "./Components/EventSchedule.js";
 import ThankYou from "./Components/ThankYou";
 

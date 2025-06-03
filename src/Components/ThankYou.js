@@ -19,7 +19,7 @@ const ThankYou = () => {
 
             React.createElement('p', null, 'With over 600+ submissions, the response was nothing short of phenomenal. Your enthusiasm, creativity, and competitive spirit made this hackathon a truly inspiring event. Each submission reflected the passion and dedication that drives innovation forward.'),
 
-            React.createElement('p', null, 'Out of this overwhelming participation, the top 62 teams were selected for the final round — a testament to the high caliber of talent we witnessed.'),
+            React.createElement('p', null, 'Out of this overwhelming participation, the top 62 teams were selected for the final round - a testament to the high caliber of talent we witnessed.'),
 
             React.createElement('p', null, 'Thank you for being a part of this journey and pushing the boundaries of what\'s possible. We hope this experience sparked new ideas, collaborations, and opportunities.'),
 
