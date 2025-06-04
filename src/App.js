@@ -75,8 +75,8 @@ function MainContent() {
           <h1>Winners of Aventus 2.0</h1>
         </div> */}
         <ThankYou />
-        <OurSponsors />
         <Slider />
+        <OurSponsors />
         {/* <Faqs /> */}
         <div
           style={{

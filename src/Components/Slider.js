@@ -9,32 +9,32 @@ const Slider = () => {
   // Sample images - replace with your actual image URLs
   const images = [
     {
-      src: "./aventus1.jpg",
+      src: "https://res.cloudinary.com/ddildvi0y/image/upload/aventus1_f5iafu.jpg",
       alt: "Aventus Team",
       title: " ",
     },
     {
-      src: "./aventus2.jpg",
+      src: "https://res.cloudinary.com/ddildvi0y/image/upload/aventus2_vqwcsd.jpg",
       alt: "Teams  at Work",
       title: " ",
     },
     {
-      src: "./aventus3.jpg",
+      src: "https://res.cloudinary.com/ddildvi0y/image/upload/aventus3_w8ilbu.jpg",
       alt: "Authorities",
       title: " ",
     },
     {
-      src: "./aventus4.jpg",
+      src: "https://res.cloudinary.com/ddildvi0y/image/upload/aventus4_kut76j.jpg",
       alt: "Judges",
       title: " ",
     },
     {
-      src: "./aventus5.jpg",
+      src: "https://res.cloudinary.com/ddildvi0y/image/upload/aventus5_y5llf2.jpg",
       alt: "Final day",
       title: " ",
     },
     {
-      src: "./aventus6.jpg",
+      src: "https://res.cloudinary.com/ddildvi0y/image/upload/aventus6_pqdpbg.jpg",
       alt: "Evaluation",
       title: " ",
     },
