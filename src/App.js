@@ -16,6 +16,7 @@ import IndividualSponsor from "./Components/Individualsponsors.js";
 // import ContactUs from "./Components/ContactUs";
 // import EventSchedule from "./Components/EventSchedule.js";
 import ThankYou from "./Components/ThankYou";
+import Slider from "./Components/Slider.js";
 
 function MainContent() {
   // const images = [image1, image2, image3, image4, image5];
@@ -74,6 +75,7 @@ function MainContent() {
           <h1>Winners of Aventus 2.0</h1>
         </div> */}
         <ThankYou />
+        <Slider />
         <OurSponsors />
         {/* <Faqs /> */}
         <div
