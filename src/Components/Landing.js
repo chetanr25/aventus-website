@@ -150,10 +150,10 @@ function Landing() {
             data-aos="fade-up"
             data-aos-delay="800"
           >
-            <div className="date-badge">
-              <span className="date-icon">📅</span>
-              <span>Completed</span>
-            </div>
+            // <div className="date-badge">
+            //   <span className="date-icon">📅</span>
+            //   <span>Completed</span>
+            // </div>
             <div className="event-type">24-hour national level hackathon</div>
           </div>
         </div>
